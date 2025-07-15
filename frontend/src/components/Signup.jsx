@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const {user} = useSelector(store=> store.auth)
+  const { user } = useSelector((store) => store.auth);
   const [input, setInput] = useState({
     username: "",
     email: "",
@@ -29,7 +29,7 @@ const Signup = () => {
     try {
       setLoader(true);
       const response = await axios.post(
-        `${import.meta.env.VITE_DOMAIN_URL}/api/v1/user/register`,
+        `https://instaclone-11n5.onrender.com/api/v1/user/register`,
         input,
         {
           headers: {
@@ -52,11 +52,11 @@ const Signup = () => {
       setLoader(false);
     }
   };
-   useEffect(() => {
-          if (user) {
-              navigate("/")
-          }
-      }, [])
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className="flex items-center w-screen h-screen justify-center">
       <form
@@ -107,7 +107,6 @@ const Signup = () => {
         ) : (
           <Button type="submit">Signup</Button>
         )}
-
 
         <span className="text-center">
           Already have an account?{" "}
