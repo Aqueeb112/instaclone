@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import MainLayout from "./components/MainLayout";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
-import EditProfile from "./components/editProfile";
+import EditProfile from "./components/EditProfile";
 import ChatPage from "./components/ChatPage";
 import {io} from "socket.io-client"
 import { useDispatch, useSelector } from "react-redux";
