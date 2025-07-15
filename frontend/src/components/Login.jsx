@@ -34,7 +34,7 @@ const Login = () => {
         e.preventDefault()
             try {
                 setLoader(true)
-                let response = await axios.post(`${import.meta.env.VITE_DOMAIN_URL}/api/v1/user/login`, input, {
+                let response = await axios.post(`https://instaclone-11n5.onrender.com/api/v1/user/login`, input, {
                     headers:{
                           "Content-Type": "application/json",
                     } ,
