@@ -46,7 +46,7 @@ const ChatPage = () => {
                 <hr className="mb-4 border-gray-300" />
                 <div className="overflow-y-auto h-[80vh]">
                     {suggestedUsers?.map((suggesteduser) => {
-                        const isOnline = onlineUsers.includes(suggesteduser._id)
+                        const isOnline = onlineUsers?.includes(suggesteduser._id)
 
                         return <div onClick={() => dispatch(setselectedUser(suggesteduser))} key={suggesteduser._id} className="flex gap-3 items-center p-3 hover:bg-gray-50 cursor-pointer">
                             <Avatar className="w-14 h-14">
